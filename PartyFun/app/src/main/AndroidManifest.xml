@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TruthOrDare"></activity>
-        <activity android:name=".playArea" />
+        <activity android:name=".PlayArea" />
         <activity android:name=".SpecialOne" />
         <activity android:name=".SixthActivity" />
         <activity android:name=".FifthActivity" />
