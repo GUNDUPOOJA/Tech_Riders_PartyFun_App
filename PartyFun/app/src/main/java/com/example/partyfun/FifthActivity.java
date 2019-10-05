@@ -6,16 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class SpecialOne extends AppCompatActivity {
+public class FifthActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_special_one);
+        setContentView(R.layout.activity_fifth);
     }
 
-    public void onContinue(View v){
-        Intent opt = new Intent(this,FourthActivity.class);
-        startActivity(opt);
+    public void onDone(View v){
+        Intent done_int1 =  new Intent();
+        setResult(FourthActivity.GOOD_RES,done_int1);
+        finish();
     }
 }

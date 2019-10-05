@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SpecialOne"></activity>
+        <activity android:name=".SixthActivity" />
+        <activity android:name=".FifthActivity" />
+        <activity android:name=".FourthActivity" />
         <activity android:name=".SelectImage" />
         <activity android:name=".MainActivity">
             <intent-filter>
