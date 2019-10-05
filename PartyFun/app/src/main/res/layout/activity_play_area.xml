@@ -35,6 +35,7 @@
         android:id="@+id/button12"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:onClick="onGo"
         android:text="GO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
