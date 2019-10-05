@@ -8,16 +8,20 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void onClick(View v){
-        Intent intent_special = new Intent(this,SpecialOne.class);
+
+    public void onClick(View v) {
+        Intent intent_special = new Intent(this, SpecialOne.class);
         startActivity(intent_special);
 
     }
 
 
 }
+
+
