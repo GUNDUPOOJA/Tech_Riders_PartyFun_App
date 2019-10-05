@@ -22,9 +22,15 @@ public class FourthActivity extends AppCompatActivity {
         startActivity(truth);
     }
 
+
     public void onDare(View v){
         Intent dare = new Intent(this,SixthActivity.class);
         startActivity(dare);
+    }
+
+    public void onStart(View v){
+        Intent start = new Intent(this,SelectImage.class);
+        startActivity(start);
     }
 
     public void onActivityResult(int requestCode,int resultCode,Intent tipInt){
