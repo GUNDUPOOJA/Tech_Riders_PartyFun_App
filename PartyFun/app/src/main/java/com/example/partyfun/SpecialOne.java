@@ -30,9 +30,10 @@ public class SpecialOne extends AppCompatActivity {
         startActivity(opt);
     }
 
-    public void onStart(View v){
+    public void onStart(final View v){
         Button button = findViewById(R.id.button3);
         button.setEnabled(true);
+
         counter = 0;
         int i = 1;
         final TextView counttime=findViewById(R.id.counttime);
@@ -45,9 +46,13 @@ public class SpecialOne extends AppCompatActivity {
             }
             @Override
             public void onFinish() {
+                int p = 1;
                 Button button = findViewById(R.id.button3);
                 button.setEnabled(false);
                 counttime.setText("Finished");
+                TextView t = findViewById(R.id.textView8);
+                t.setText("Player "+ p + " Score = 10" );
+                p++;
             }
         }.start();
     }
@@ -57,6 +62,7 @@ public class SpecialOne extends AppCompatActivity {
         TextView display = findViewById(R.id.display);
         Log.d("Alert",String.valueOf(click));
         display.setText(Integer.toString(click));
+
 
     }
 }
