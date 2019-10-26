@@ -16,8 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Question" />
-        <activity android:name=".TruthOrDare" />
         <activity android:name=".PlayArea" />
         <activity android:name=".SpecialOne" />
         <activity android:name=".SixthActivity" />

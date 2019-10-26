@@ -9,10 +9,10 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="274dp"
-        android:layout_height="75dp"
-        android:background="#F2F2F2"
-        android:text="      Welcome!!!!!"
+        android:layout_width="220dp"
+        android:layout_height="51dp"
+        android:background="#00FFFFFF"
+        android:text="Welcome!!!!!"
         android:textColor="#EE5353"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,8 +24,8 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="79dp"
-        android:layout_height="67dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:text="+"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,8 +50,8 @@
 
     <EditText
         android:id="@+id/addBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:ems="10"
         android:hint="Enter your name"
         android:inputType="textPersonName"
@@ -60,7 +60,7 @@
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.371" />
+        app:layout_constraintVertical_bias="0.341" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerView"

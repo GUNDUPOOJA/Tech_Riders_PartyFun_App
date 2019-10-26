@@ -10,14 +10,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="236dp"
-        android:layout_height="240dp"
+        android:layout_width="174dp"
+        android:layout_height="152dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.191"
+        app:layout_constraintVertical_bias="0.286"
         app:srcCompat="@drawable/truthordare" />
 
     <Button
@@ -27,21 +27,32 @@
         android:text="Start/Stop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.654" />
 
     <Button
-        android:id="@+id/button12"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:onClick="onGo"
-        android:text="GO"
+        android:id="@+id/truth"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="TRUTH"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintHorizontal_bias="0.21"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.654" />
+        app:layout_constraintVertical_bias="0.834" />
+
+    <Button
+        android:id="@+id/dare"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="DARE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.835"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.835" />
 </androidx.constraintlayout.widget.ConstraintLayout>
