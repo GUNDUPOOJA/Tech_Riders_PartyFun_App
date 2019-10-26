@@ -8,7 +8,7 @@
     tools:context=".FifthActivity">
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/dareBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+ ADD TRUTHS"
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.12" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/dareEdt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

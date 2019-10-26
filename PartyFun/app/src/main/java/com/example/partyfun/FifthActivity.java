@@ -34,12 +34,12 @@ public class FifthActivity extends AppCompatActivity {
                 return gesture_detector.onTouchEvent(e);
             }
         });
-        Button truth_add = findViewById(R.id.button9);
+        Button truth_add = findViewById(R.id.dareBTN);
 
         truth_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText add_player = findViewById(R.id.editText);
+                EditText add_player = findViewById(R.id.dareEdt);
 
 
                 String str = add_player.getText().toString();
