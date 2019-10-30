@@ -43,10 +43,10 @@ public class FifthActivity extends AppCompatActivity {
                 EditText add_player = findViewById(R.id.dareEdt);
                 String str = add_player.getText().toString();
                 if (str.length()==0){
-                    Toast.makeText(FifthActivity.this, "Enter the player name " + str, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FifthActivity.this, "Enter Truths " + str, Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(FifthActivity.this, "Name is succesfully  is entered", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FifthActivity.this, "Your Thruth question is succesfully entered", Toast.LENGTH_SHORT).show();
                     player_Model1.gettruthsarray().add(new Model1.Truth(str));
 
                     playerServer.notifyItemInserted(player_Model1.gettruthsarray().size() - 1);

@@ -46,10 +46,10 @@ public class SixthActivity extends AppCompatActivity {
 
                 if (str.length()==0){
 
-                    Toast.makeText(SixthActivity.this, "Enter the player name " + str, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SixthActivity.this, "Enter Dares " + str, Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(SixthActivity.this, "Name is succesfully  is entered", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SixthActivity.this, "Your Dare question is succesfully entered", Toast.LENGTH_SHORT).show();
                     player_Model2.getdaresArray().add(new Model2.Dare(str));
 
                     playerServer.notifyItemInserted(player_Model2.getdaresArray().size() - 1);
