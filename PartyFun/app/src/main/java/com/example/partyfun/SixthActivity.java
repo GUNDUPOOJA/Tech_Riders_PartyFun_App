@@ -11,6 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class SixthActivity extends AppCompatActivity {
     private Model2 player_Model2;
@@ -41,13 +42,18 @@ public class SixthActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EditText add_player = findViewById(R.id.dareEdt);
-
-
                 String str = add_player.getText().toString();
-                player_Model2.getdaresArray().add(new Model2.Dare(str));
 
-                playerServer.notifyItemInserted(player_Model2.getdaresArray().size() - 1);
-                add_player.getText().clear();
+                if (str.length()==0){
+                    Toast.makeText(SixthActivity.this, "Enter the player name " + str, Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(SixthActivity.this, "Name is succesfully  is entered", Toast.LENGTH_SHORT).show();
+                    player_Model2.getdaresArray().add(new Model2.Dare(str));
+
+                    playerServer.notifyItemInserted(player_Model2.getdaresArray().size() - 1);
+                    add_player.getText().clear();
+                }
             }
 
         });
