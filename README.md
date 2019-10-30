@@ -1,4 +1,4 @@
-![](logo.png)
+![](td_logo.png)
 
 #  Fun_App
 To brighten the boring party time, here is the application to create fun in the party. A traditional game of truth or dare turning in to digital application which is simple and fun.
