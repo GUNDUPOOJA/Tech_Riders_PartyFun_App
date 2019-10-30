@@ -45,6 +45,7 @@ public class SixthActivity extends AppCompatActivity {
                 String str = add_player.getText().toString();
 
                 if (str.length()==0){
+
                     Toast.makeText(SixthActivity.this, "Enter the player name " + str, Toast.LENGTH_SHORT).show();
                 }
                 else {
