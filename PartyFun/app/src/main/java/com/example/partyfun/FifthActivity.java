@@ -11,6 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class FifthActivity extends AppCompatActivity {
     private Model1 player_Model1;
@@ -40,13 +41,18 @@ public class FifthActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EditText add_player = findViewById(R.id.dareEdt);
-
-
                 String str = add_player.getText().toString();
-                player_Model1.gettruthsarray().add(new Model1.Truth(str));
+                if (str.length()==0){
+                    Toast.makeText(FifthActivity.this, "Enter the player name " + str, Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(FifthActivity.this, "Name is succesfully  is entered", Toast.LENGTH_SHORT).show();
+                    player_Model1.gettruthsarray().add(new Model1.Truth(str));
 
-                playerServer.notifyItemInserted(player_Model1.gettruthsarray().size() - 1);
-                add_player.getText().clear();
+                    playerServer.notifyItemInserted(player_Model1.gettruthsarray().size() - 1);
+                    add_player.getText().clear();
+                }
+
             }
 
         });
