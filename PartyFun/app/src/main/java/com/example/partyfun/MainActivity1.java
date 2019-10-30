@@ -35,14 +35,8 @@ public class MainActivity1 extends AppCompatActivity {
         playerrecycler.setLayoutManager(linearLayoutManager);
 
         Button word_add = findViewById(R.id.button);
-        EditText add_player = findViewById(R.id.addBTN);
 
-        /*String str = add_player.getText().toString();
-        word_add.setEnabled(true);
-        if(str.equals(" ")|| str == null);
-        {
-            word_add.setEnabled(false);
-        }*/
+
 
         playerrecycler.addOnItemTouchListener(new RecyclerView.SimpleOnItemTouchListener(){
             @Override
@@ -50,7 +44,7 @@ public class MainActivity1 extends AppCompatActivity {
                 return gesture_detector.onTouchEvent(e);
             }
         });
-      //  Button word_add = findViewById(R.id.button);
+
 
         word_add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +58,7 @@ public class MainActivity1 extends AppCompatActivity {
                     Toast.makeText(MainActivity1.this, "Enter the player name " + str, Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(MainActivity1.this, "Name is succesfully  is entered", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity1.this, "Player name successfully entered", Toast.LENGTH_SHORT).show();
                     player_model.getPlayersarray().add(new Model.Player(str));
 
                     playerServer.notifyItemInserted(player_model.getPlayersarray().size() - 1);
@@ -83,8 +77,13 @@ public class MainActivity1 extends AppCompatActivity {
 
 
     public void onClick(View v) {
-        Intent intent_special = new Intent(this, SpecialOne.class);
-        startActivity(intent_special);
+        if (player_model.getPlayersarray().size()>=2 ) {
+            Intent intent_special = new Intent(this, SpecialOne.class);
+            startActivity(intent_special);
+        }
+        else{
+            Toast.makeText(MainActivity1.this, "Game is restricted to at least two players " , Toast.LENGTH_SHORT).show();
+        }
     }
 
 
