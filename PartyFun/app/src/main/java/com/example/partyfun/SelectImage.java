@@ -26,7 +26,7 @@ public class SelectImage extends AppCompatActivity {
     }
 
     public void onBrowse(View v){
-        imageView = findViewById(R.id.imageView2);
+        imageView = findViewById(R.id.imageView);
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
