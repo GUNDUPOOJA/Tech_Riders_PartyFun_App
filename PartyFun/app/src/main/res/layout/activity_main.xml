@@ -27,8 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="Welcome to funapp"
-            android:textColor="#CE7EDB"
+            android:text="   Welcome to funapp"
+            android:textColor="#0C0C0C"
             android:textSize="25sp"
             android:textStyle="bold" />
 

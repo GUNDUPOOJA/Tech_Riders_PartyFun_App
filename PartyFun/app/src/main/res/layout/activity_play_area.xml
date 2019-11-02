@@ -14,29 +14,35 @@
         android:layout_height="152dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286"
+        app:layout_constraintVertical_bias="0.364"
         app:srcCompat="@drawable/truthordare" />
 
     <Button
         android:id="@+id/button11"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="177dp"
+        android:layout_height="60dp"
         android:text="Start/Stop"
+        android:textColor="#141313"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.654" />
+        app:layout_constraintVertical_bias="0.653" />
 
     <Button
         android:id="@+id/truth"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_width="146dp"
+        android:layout_height="69dp"
         android:text="TRUTH"
+        android:textColor="#0C0B0B"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.21"
@@ -46,9 +52,12 @@
 
     <Button
         android:id="@+id/dare"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_width="130dp"
+        android:layout_height="74dp"
         android:text="DARE"
+        android:textColor="#160101"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.835"
