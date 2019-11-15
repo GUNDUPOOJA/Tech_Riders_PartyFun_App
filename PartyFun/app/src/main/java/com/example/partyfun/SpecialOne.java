@@ -36,7 +36,7 @@ public class SpecialOne extends AppCompatActivity {
 
         score_model = Model3.getModel();
         scoreServer = new ScoreAdapter(score_model);
-        scorerecycler = findViewById(R.id.RecyclerView1);
+        scorerecycler = findViewById(R.id.RecyclerView2);
         scorerecycler.setAdapter(scoreServer);
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         scorerecycler.setLayoutManager(linearLayoutManager);
