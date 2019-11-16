@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PartyFun</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">NxS95gYSBP6gVnqiGbEQixhNZU6m9FRSfTDT921Y</string>
+    <string name="back4app_client_key">NXvXyJbpsfpruNOAdjhyAOqlivMuEYjtl7Yv3mPg</string>
 </resources>
