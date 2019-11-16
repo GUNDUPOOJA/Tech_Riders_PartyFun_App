@@ -17,33 +17,33 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Tru extends AppCompatActivity {
+public class Dar extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tru);
-        final ArrayList<Object> Tlist  = new ArrayList<>();
+        setContentView(R.layout.activity_dar);
+        final ArrayList<Object> DList  = new ArrayList<>();
 
-        final TextView a = findViewById(R.id.tru);
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("Truth");
-        final Random r = new Random();
+        final TextView n = findViewById(R.id.dru);
+        ParseQuery<ParseObject> query2 = ParseQuery.getQuery("Dare");
+        final Random ran = new Random();
 
-        query.findInBackground(new FindCallback<ParseObject>() {
-                                   public void done(List<ParseObject> truthList, ParseException e) {
+        query2.findInBackground(new FindCallback<ParseObject>() {
+                                   public void done(List<ParseObject> darelist, ParseException e) {
                                        if (e == null) {
-                                           for (int i = 0; i < truthList.size(); i++) {
-                                               System.out.println(truthList.get(i).get("Truth"));
+                                           for (int i = 0; i < darelist.size(); i++) {
+                                               System.out.println(darelist.get(i).get("Dares"));
 
-                                               Tlist.add(" "+truthList.get(i).get("Truth"));
+                                               DList.add(" "+darelist.get(i).get("Dares"));
                                                //    a.setText("truth" + truthList.get(i).get("Truth"));
                                                System.out.println("abc");
-                                               System.out.println(Tlist.size());
+                                               System.out.println(DList.size());
                                            }
                                            System.out.println("dffafafdg");
-                                           System.out.println(Tlist);
-                                           Object abc = Tlist.get(r.nextInt(Tlist.size()));
-                                           a.setText(""+ abc);
+                                           System.out.println(DList);
+                                           Object abc = DList.get(ran.nextInt(DList.size()));
+                                           n.setText(""+ abc);
                                        } else {
                                            Log.d("Parse", "Error: " + e.getMessage());
                                        }
@@ -64,5 +64,5 @@ public class Tru extends AppCompatActivity {
         Intent F = new Intent(this,PlayArea.class);
         startActivity(F);
     }
-}
+    }
 

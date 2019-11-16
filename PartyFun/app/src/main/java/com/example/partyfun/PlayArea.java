@@ -4,19 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 public class PlayArea extends AppCompatActivity {
 
@@ -31,12 +20,12 @@ public class PlayArea extends AppCompatActivity {
 
 
     public void onTruth(View v) {
-        Intent t = new Intent(this,tru.class);
+        Intent t = new Intent(this, Tru.class);
         startActivity(t);
     }
 
     public void onDare(View v) {
-        Intent D = new Intent(this,tru.class);
+        Intent D = new Intent(this, Dar.class);
         startActivity(D);
     }
 };
