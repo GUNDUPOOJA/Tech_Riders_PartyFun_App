@@ -6,10 +6,8 @@ import android.content.ClipData;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 public class SelectImage extends AppCompatActivity {
@@ -48,10 +46,10 @@ public class SelectImage extends AppCompatActivity {
 
         this.img1 = findViewById(R.id.imageView1);
         this.img2 = findViewById(R.id.imageView2);
-//        this.img3 = findViewById(R.id.imageView3);
-//        this.img4 = findViewById(R.id.imageView4);
-//        this.img5 = findViewById(R.id.imageView5);
-//        this.img6 = findViewById(R.id.imageView6);
+       this.img3 = findViewById(R.id.imageView3);
+        this.img4 = findViewById(R.id.imageView4);
+        this.img5 = findViewById(R.id.imageView5);
+        this.img6 = findViewById(R.id.imageView6);
 //        this.img7 = findViewById(R.id.imageView7);
 //        this.img8 = findViewById(R.id.imageView8);
 //        this.img9 = findViewById(R.id.imageView9);
@@ -81,19 +79,6 @@ public class SelectImage extends AppCompatActivity {
                 img4.setImageURI(clipdata.getItemAt(3).getUri());
                 img5.setImageURI(clipdata.getItemAt(4).getUri());
                 img6.setImageURI(clipdata.getItemAt(5).getUri());
-                img7.setImageURI(clipdata.getItemAt(6).getUri());
-                img8.setImageURI(clipdata.getItemAt(7).getUri());
-                img9.setImageURI(clipdata.getItemAt(8).getUri());
-                img10.setImageURI(clipdata.getItemAt(9).getUri());
-                img11.setImageURI(clipdata.getItemAt(10).getUri());
-                img12.setImageURI(clipdata.getItemAt(11).getUri());
-                img13.setImageURI(clipdata.getItemAt(12).getUri());
-                img14.setImageURI(clipdata.getItemAt(13).getUri());
-                img15.setImageURI(clipdata.getItemAt(14).getUri());
-                img16.setImageURI(clipdata.getItemAt(15).getUri());
-                img17.setImageURI(clipdata.getItemAt(16).getUri());
-                img18.setImageURI(clipdata.getItemAt(17).getUri());
-
 
                 for (int i = 0; i < clipdata.getItemCount(); i++) {
                     ClipData.Item item = clipdata.getItemAt(i);
@@ -129,5 +114,4 @@ public class SelectImage extends AppCompatActivity {
 //    }
         }
     }
-
 }
