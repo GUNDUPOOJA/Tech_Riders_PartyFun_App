@@ -24,22 +24,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.112" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="197dp"
-        android:layout_height="51dp"
-        android:onClick="onBrowse"
-        android:text="Browse"
-        android:textColor="#0C0C0C"
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="197dp"-->
+<!--        android:layout_height="51dp"-->
+<!--        android:onClick="onBrowse"-->
+<!--        android:text="Browse"-->
+<!--        android:textColor="#0C0C0C"-->
 
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.257"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.936" />
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.257"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.936" />-->
 
     <Button
         android:id="@+id/button3"
@@ -71,7 +71,7 @@
             android:layout_height="75dp"
             app:layout_column="0"
             app:layout_row="0"
-            app:srcCompat="@drawable/men4" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -79,7 +79,7 @@
             android:layout_height="75dp"
             app:layout_column="0"
             app:layout_row="1"
-            app:srcCompat="@drawable/women4" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -87,7 +87,7 @@
             android:layout_height="75dp"
             app:layout_column="0"
             app:layout_row="2"
-            app:srcCompat="@drawable/men3" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -95,7 +95,7 @@
             android:layout_height="75dp"
             app:layout_column="1"
             app:layout_row="0"
-            app:srcCompat="@drawable/women3" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -103,7 +103,7 @@
             android:layout_height="75dp"
             app:layout_column="1"
             app:layout_row="1"
-            app:srcCompat="@drawable/men2" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -111,7 +111,7 @@
             android:layout_height="75dp"
             app:layout_column="1"
             app:layout_row="2"
-            app:srcCompat="@drawable/woman2" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <ImageView
             android:id="@+id/imageView1"
@@ -119,7 +119,7 @@
             android:layout_height="75dp"
             app:layout_column="2"
             app:layout_row="0"
-            app:srcCompat="@drawable/men1" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <ImageView
             android:id="@+id/imageView8"
@@ -127,7 +127,7 @@
             android:layout_height="75dp"
             app:layout_column="2"
             app:layout_row="1"
-            app:srcCompat="@drawable/woman1" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <ImageView
             android:id="@+id/imageView9"
@@ -135,7 +135,7 @@
             android:layout_height="75dp"
             app:layout_column="2"
             app:layout_row="2"
-            app:srcCompat="@drawable/men2" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <ImageView
             android:id="@+id/imageView10"
@@ -143,6 +143,7 @@
             android:layout_height="75dp"
             app:layout_column="0"
             app:layout_row="3"
+            app:srcCompat="@mipmap/ic_launcher"
             />
 
         <ImageView
@@ -151,6 +152,7 @@
             android:layout_height="75dp"
             app:layout_column="2"
             app:layout_row="3"
+            app:srcCompat="@mipmap/ic_launcher"
             />
 
         <ImageView
@@ -159,6 +161,7 @@
             android:layout_height="75dp"
             app:layout_column="0"
             app:layout_row="4"
+            app:srcCompat="@mipmap/ic_launcher"
            />
 
         <ImageView
@@ -167,6 +170,7 @@
             android:layout_height="75dp"
             app:layout_column="1"
             app:layout_row="4"
+            app:srcCompat="@mipmap/ic_launcher"
              />
 
         <ImageView
@@ -175,6 +179,7 @@
             android:layout_height="75dp"
             app:layout_column="2"
             app:layout_row="4"
+            app:srcCompat="@mipmap/ic_launcher"
             />
 
         <ImageView
@@ -183,6 +188,7 @@
             android:layout_height="75dp"
             app:layout_column="0"
             app:layout_row="5"
+            app:srcCompat="@mipmap/ic_launcher"
            />
 
         <ImageView
@@ -191,6 +197,7 @@
             android:layout_height="75dp"
             app:layout_column="1"
             app:layout_row="5"
+            app:srcCompat="@mipmap/ic_launcher"
             />
 
         <ImageView
@@ -199,6 +206,7 @@
             android:layout_height="75dp"
             app:layout_column="2"
             app:layout_row="5"
+            app:srcCompat="@mipmap/ic_launcher"
              />
 
         <ImageView
@@ -207,6 +215,7 @@
             android:layout_height="75dp"
             app:layout_column="1"
             app:layout_row="3"
+            app:srcCompat="@mipmap/ic_launcher"
              />
 
 
