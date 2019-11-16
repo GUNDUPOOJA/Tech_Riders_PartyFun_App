@@ -87,10 +87,6 @@ public class PlayArea extends AppCompatActivity {
         //Button getBTN = findViewById(R.id.test);
         final ArrayList<Object> Tlist  = new ArrayList<>();
 
-
-
-
-
         final TextView a = findViewById(R.id.tv);
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Truth");
         final Random r = new Random();
@@ -118,8 +114,7 @@ public class PlayArea extends AppCompatActivity {
 
         );
 
-        
-        System.out.println(Tlist.size());
+
 
     }
 
