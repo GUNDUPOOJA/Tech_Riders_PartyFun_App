@@ -43,6 +43,7 @@ To brighten the boring party time, here is the application to create fun in the 
 
 * Only works in android devices.
 * Android 5.0(Lollipop) and above versions.
+* Minimum sdk version 21 and target sdk version 29.
 
 ## Database:
 
