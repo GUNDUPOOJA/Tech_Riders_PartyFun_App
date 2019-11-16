@@ -118,6 +118,7 @@ public class PlayArea extends AppCompatActivity {
 
         );
 
+        
         System.out.println(Tlist.size());
 
     }
