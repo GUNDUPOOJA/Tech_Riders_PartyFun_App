@@ -15,11 +15,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity1 extends AppCompatActivity {
     private Model player_model;
     private PlayerAdapter playerServer = null;
     private RecyclerView playerrecycler = null;
     private GestureDetectorCompat gesture_detector = null;
+    static ArrayList<String> player_data = new ArrayList<String>();
 
 
 
@@ -59,6 +62,7 @@ public class MainActivity1 extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(MainActivity1.this, "Player name successfully entered", Toast.LENGTH_SHORT).show();
+                    player_data.add(str);
                     player_model.getPlayersarray().add(new Model.Player(str));
 
                     playerServer.notifyItemInserted(player_model.getPlayersarray().size() - 1);

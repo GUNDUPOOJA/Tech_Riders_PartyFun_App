@@ -21,6 +21,8 @@ public class Model3 {
             this.Score = Score;
 
         }
+
+
     }
 
 
@@ -34,6 +36,11 @@ public class Model3 {
     }
 
     private ArrayList<Score> Scoresarray;
+
+
+    public String  get_index_score(int index){
+        return  Scoresarray.get(index).Score;
+    }
 
     private Model3() {
         setScoresarray(new ArrayList<Score>());

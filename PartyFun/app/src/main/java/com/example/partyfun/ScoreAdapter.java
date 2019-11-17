@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ScoreViewHolder>  {
     private Model3 score_model;
+    static RecyclerView rview ;
 
     public ScoreAdapter(Model3 score_model) {
         super();
@@ -22,6 +23,7 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ScoreViewHol
         LinearLayout lin_layout = (LinearLayout) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.score_detailed_view, parent, false);
         ScoreViewHolder linviewhol = new ScoreViewHolder(lin_layout);
+
         return linviewhol;
     }
 
@@ -40,7 +42,7 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ScoreViewHol
         return score_model.getScoresarray().size();
     }
 
-    public static class ScoreViewHolder extends RecyclerView.ViewHolder {
+    public class ScoreViewHolder extends RecyclerView.ViewHolder {
         public LinearLayout linearView;
 
         public ScoreViewHolder(LinearLayout lin_layout) {
