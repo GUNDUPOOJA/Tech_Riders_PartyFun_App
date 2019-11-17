@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -28,7 +29,23 @@ public class SpecialOne extends AppCompatActivity {
     private int no_of_times_rotated = 0;
     TextView display;
 
+    private class RecyclerViewOnGestureListener extends GestureDetector.SimpleOnGestureListener {
 
+        @Override
+        public boolean onSingleTapConfirmed(MotionEvent e) {
+            View view = scorerecycler.findChildViewUnder(e.getX(), e.getY());
+            if (view != null) {
+                RecyclerView.ViewHolder holder = scorerecycler.getChildViewHolder(view);
+                if (holder instanceof ScoreAdapter.ScoreViewHolder) {
+                    int position = holder.getAdapterPosition();
+                    Log.d("click", "clicked on item " + position);
+                    return true;
+
+                }
+            }
+            return false;
+        }
+    }
 
 
     @Override
@@ -46,6 +63,8 @@ public class SpecialOne extends AppCompatActivity {
         scorerecycler.setAdapter(scoreServer);
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         scorerecycler.setLayoutManager(linearLayoutManager);
+        gesture_detector = new GestureDetectorCompat(this, new RecyclerViewOnGestureListener());
+
         scorerecycler.addOnItemTouchListener(new RecyclerView.SimpleOnItemTouchListener(){
             @Override
             public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
