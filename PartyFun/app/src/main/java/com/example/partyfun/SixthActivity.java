@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +21,26 @@ public class SixthActivity extends AppCompatActivity {
     private RecyclerView playerrecycler = null;
     private GestureDetectorCompat gesture_detector = null;
 
+    private class RecyclerViewOnGestureListener extends GestureDetector.SimpleOnGestureListener {
+
+        @Override
+        public boolean onSingleTapConfirmed(MotionEvent e) {
+            View view = playerrecycler.findChildViewUnder(e.getX(), e.getY());
+            if (view != null) {
+                RecyclerView.ViewHolder holder = playerrecycler.getChildViewHolder(view);
+                if (holder instanceof ScoreAdapter.ScoreViewHolder) {
+                    int position = holder.getAdapterPosition();
+                    Log.d("click", "clicked on item " + position);
+                    return true;
+
+                }
+            }
+            return false;
+        }
+    }
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +51,8 @@ public class SixthActivity extends AppCompatActivity {
         playerrecycler.setAdapter(playerServer);
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         playerrecycler.setLayoutManager(linearLayoutManager);
+
+        gesture_detector = new GestureDetectorCompat(this, new SixthActivity.RecyclerViewOnGestureListener());
         playerrecycler.addOnItemTouchListener(new RecyclerView.SimpleOnItemTouchListener(){
             @Override
             public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
