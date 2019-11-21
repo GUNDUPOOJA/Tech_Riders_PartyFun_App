@@ -20,6 +20,8 @@ public class Tru1 extends AppCompatActivity {
 
         final TextView a = findViewById(R.id.tru);
         System.out.println(FifthActivity.truthArray);
+        String abc = FifthActivity.truthArray.get(r1.nextInt(FifthActivity.truthArray.size()));
+        a.setText(""+ abc);
     }
 
 

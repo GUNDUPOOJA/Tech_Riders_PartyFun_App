@@ -20,6 +20,8 @@ public class Dar1 extends AppCompatActivity {
 
         final TextView a = findViewById(R.id.dru);
         System.out.println(SixthActivity.dareArray);
+        String abc = SixthActivity.dareArray.get(r1.nextInt(SixthActivity.dareArray.size()));
+        a.setText(""+ abc);
     }
 
     public void onDone(View v) {
