@@ -90,7 +90,7 @@
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onStart"
+        android:onClick="onContinue"
         android:text="Continue With Us"
         android:textColor="#111111"
         android:textSize="18sp"

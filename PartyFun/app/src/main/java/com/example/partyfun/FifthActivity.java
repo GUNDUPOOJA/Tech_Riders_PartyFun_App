@@ -15,11 +15,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class FifthActivity extends AppCompatActivity {
     private Model1 player_Model1;
     private TruthAdapter playerServer = null;
     private RecyclerView playerrecycler = null;
     private GestureDetectorCompat gesture_detector = null;
+    static ArrayList<String> truthArray = new ArrayList<String>();
 
     private class RecyclerViewOnGestureListener extends GestureDetector.SimpleOnGestureListener {
 
@@ -72,6 +75,7 @@ public class FifthActivity extends AppCompatActivity {
                 else{
                     Toast.makeText(FifthActivity.this, "Your Truth question is succesfully entered", Toast.LENGTH_SHORT).show();
                     player_Model1.gettruthsarray().add(new Model1.Truth(str));
+                    truthArray.add(str);
 
                     playerServer.notifyItemInserted(player_Model1.gettruthsarray().size() - 1);
                     add_player.getText().clear();

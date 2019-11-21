@@ -15,12 +15,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class SixthActivity extends AppCompatActivity {
     private Model2 player_Model2;
     private DareAdapter playerServer = null;
     private RecyclerView playerrecycler = null;
     private GestureDetectorCompat gesture_detector = null;
-
+    static ArrayList<String> dareArray = new ArrayList<String>();
     private class RecyclerViewOnGestureListener extends GestureDetector.SimpleOnGestureListener {
 
         @Override
@@ -75,6 +77,7 @@ public class SixthActivity extends AppCompatActivity {
                 else {
                     Toast.makeText(SixthActivity.this, "Your Dare question is succesfully entered", Toast.LENGTH_SHORT).show();
                     player_Model2.getdaresArray().add(new Model2.Dare(str));
+                    dareArray.add(str);
 
                     playerServer.notifyItemInserted(player_Model2.getdaresArray().size() - 1);
                     add_player.getText().clear();

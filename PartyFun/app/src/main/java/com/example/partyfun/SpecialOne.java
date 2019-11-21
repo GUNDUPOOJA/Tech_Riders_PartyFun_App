@@ -80,7 +80,7 @@ public class SpecialOne extends AppCompatActivity {
     }
 
     public void onContinue(View v){
-        Intent opt = new Intent(this,FourthActivity.class);
+        Intent opt = new Intent(this,SelectImage.class);
         startActivity(opt);
     }
 

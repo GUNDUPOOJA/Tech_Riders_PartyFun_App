@@ -28,8 +28,13 @@ public class FourthActivity extends AppCompatActivity {
         startActivity(dare);
     }
 
+    public void onContinue(View v){
+        Intent start = new Intent(this,PlayArea.class);
+        startActivity(start);
+    }
+
     public void onStart(View v){
-        Intent start = new Intent(this,SelectImage.class);
+        Intent start = new Intent(this,PlayArea2.class);
         startActivity(start);
     }
 

@@ -38,7 +38,7 @@ public class SelectImage extends AppCompatActivity {
     }
 
     public void onImage(View v) {
-        Intent image = new Intent(this, PlayArea.class);
+        Intent image = new Intent(this, FourthActivity.class);
         startActivity(image);
     }
 
