@@ -4,10 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+
+import java.util.Random;
 
 public class PlayArea extends AppCompatActivity {
+
+    ImageView imageView;
+    final Handler handler = new Handler();
+    Runnable runnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +23,31 @@ public class PlayArea extends AppCompatActivity {
         setContentView(R.layout.activity_play_area);
         Button truth=findViewById(R.id.truth);
         Button dare = findViewById(R.id.dare);
+
+
+        imageView = (ImageView) findViewById(R.id.imageView);
+        final int[] imageArray =
+                {R.drawable.men1, R.drawable.men2, R.drawable.men3,R.drawable.woman1, R.drawable.woman2, R.drawable.women3};
+
+
+        Random r = new Random();
+        int timer = r.nextInt(200 - 100) + 30;
+
+
+        runnable = new Runnable() {
+            int i = 0;
+
+            public void run() {
+                imageView.setImageResource(imageArray[i]);
+                i++;
+                if (i > imageArray.length - 1) {
+                    i = 0;
+                }
+                handler.postDelayed(this, 100);  //for interval...
+            }
+
+        };
+        handler.postDelayed(runnable, 100); //for initial delay..
 
    };
 
@@ -28,7 +61,15 @@ public class PlayArea extends AppCompatActivity {
         Intent D = new Intent(this, Dar.class);
         startActivity(D);
     }
-};
+
+    public void onclick(View v) {
+
+        handler.removeCallbacks(runnable);
+
+    }
+
+
+}
         //Button getBTN = findViewById(R.id.test);
 //        final ArrayList<Object> Tlist  = new ArrayList<>();
 //
