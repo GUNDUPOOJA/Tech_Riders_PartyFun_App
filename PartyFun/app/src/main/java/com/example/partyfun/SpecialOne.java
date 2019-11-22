@@ -17,7 +17,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SpecialOne extends AppCompatActivity {
+public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCallback{
     public int counter;
     public static int click = 0;
 
@@ -122,6 +122,8 @@ public class SpecialOne extends AppCompatActivity {
 
         }
         else{
+            ScoreDialog ed = new ScoreDialog();
+            ed.show(getSupportFragmentManager(), "Score  Dialog");
             Toast.makeText(SpecialOne.this, "GAME OVER", Toast.LENGTH_SHORT).show();
         }
     }
@@ -146,8 +148,5 @@ public class SpecialOne extends AppCompatActivity {
         scoreServer.notifyItemChanged(no_of_times_rotated);
 
         scoreServer.notifyDataSetChanged();
-
-
-
     }
 }

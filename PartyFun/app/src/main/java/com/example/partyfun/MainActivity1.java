@@ -84,9 +84,6 @@ public class MainActivity1 extends AppCompatActivity {
             public void onClick(View view) {
                 EditText add_player = findViewById(R.id.addBTN);
                 String str = add_player.getText().toString();
-
-
-
                 if (str.length()==0){
                     Toast.makeText(MainActivity1.this, "Enter the player name " + str, Toast.LENGTH_SHORT).show();
                 }
@@ -98,18 +95,9 @@ public class MainActivity1 extends AppCompatActivity {
                     playerServer.notifyItemInserted(player_model.getPlayersarray().size() - 1);
                     add_player.getText().clear();
                 }
-
-
-
             }
-
-
         });
     }
-
-
-
-
     public void onClick(View v) {
         if (player_model.getPlayersarray().size()>=2 ) {
             Intent intent_special = new Intent(this, SpecialOne.class);
