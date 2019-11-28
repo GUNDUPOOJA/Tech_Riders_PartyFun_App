@@ -100,8 +100,12 @@ public class MainActivity1 extends AppCompatActivity {
     }
     public void onClick(View v) {
         if (player_model.getPlayersarray().size()>=2 ) {
-            Intent intent_special = new Intent(this, SpecialOne.class);
-            startActivity(intent_special);
+
+            Intent opt = new Intent(this,SelectImage.class);
+            startActivity(opt);
+
+            /*Intent intent_special = new Intent(this, SpecialOne.class);
+            startActivity(intent_special);*/
         }
         else{
             Toast.makeText(MainActivity1.this, "Game is restricted to at least two players " , Toast.LENGTH_SHORT).show();

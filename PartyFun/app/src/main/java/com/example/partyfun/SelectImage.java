@@ -38,8 +38,13 @@ public class SelectImage extends AppCompatActivity {
     }
 
     public void onImage(View v) {
-        Intent image = new Intent(this, FourthActivity.class);
-        startActivity(image);
+
+        Intent intent_special = new Intent(this, SpecialOne.class);
+        startActivity(intent_special);
+
+
+        /*Intent image = new Intent(this, FourthActivity.class);
+        startActivity(image);*/
     }
 
     private void init() {

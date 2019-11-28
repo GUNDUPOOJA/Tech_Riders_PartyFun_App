@@ -64,41 +64,6 @@ public class PlayArea2 extends AppCompatActivity {
 
     }
 }
-//Button getBTN = findViewById(R.id.test);
-//        final ArrayList<Object> Tlist  = new ArrayList<>();
-//
-//        final TextView a = findViewById(R.id.tv);
-//        ParseQuery<ParseObject> query = ParseQuery.getQuery("Truth");
-//        final Random r = new Random();
-//
-//        query.findInBackground(new FindCallback<ParseObject>() {
-//            public void done(List<ParseObject> truthList, ParseException e) {
-//                                       if (e == null) {
-//                                           for (int i = 0; i < truthList.size(); i++) {
-//                                            System.out.println(truthList.get(i).get("Truth"));
-//
-//                                               Tlist.add(" "+truthList.get(i).get("Truth"));
-//                                           //    a.setText("truth" + truthList.get(i).get("Truth"));
-//                                               System.out.println("abc");
-//                                               System.out.println(Tlist.size());
-//                                           }
-//                                           System.out.println("dffafafdg");
-//                                           System.out.println(Tlist);
-//                                           Object abc = Tlist.get(r.nextInt(Tlist.size()));
-//                                           a.setText(""+ abc);
-//                                       } else {
-//                                           Log.d("Parse", "Error: " + e.getMessage());
-//                                       }
-//                                   }
-//                               }
-//
-//        );
-//
-//
-//
-//    }
-//
-//
 
 
 

@@ -80,8 +80,13 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
     }
 
     public void onContinue(View v){
-        Intent opt = new Intent(this,SelectImage.class);
-        startActivity(opt);
+
+        Intent image = new Intent(this, FourthActivity.class);
+        startActivity(image);
+
+
+       /* Intent opt = new Intent(this,SelectImage.class);
+        startActivity(opt);*/
     }
 
     public void onStart(final View v){
