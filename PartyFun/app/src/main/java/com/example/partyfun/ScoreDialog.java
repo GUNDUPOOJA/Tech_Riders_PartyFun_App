@@ -26,13 +26,13 @@ public class ScoreDialog extends DialogFragment{
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder scorebuilder = new AlertDialog.Builder(getActivity());
 //        scorebuilder.setTitle("Register the change");
-        scorebuilder.setMessage("Congratulations, You are the winner");
+        scorebuilder.setMessage("Congratulations, "+SpecialOne.winner_name +" are the winner");
 //        scorebuilder.setPositiveButton()
 
         scorebuilder.setPositiveButton("Continue", new DialogInterface.OnClickListener(){
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Intent t = new Intent((Context) scoreActivity, SelectImage.class);
+                Intent t = new Intent((Context) scoreActivity, FourthActivity.class);
                 startActivity(t);
             }
         });

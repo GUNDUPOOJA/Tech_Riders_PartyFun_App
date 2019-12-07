@@ -26,6 +26,9 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
     private RecyclerView scorerecycler = null;
     private GestureDetectorCompat gesture_detector = null;
     static int to_be_rotated = MainActivity1.player_data.size();
+
+    static String winner_name = null;
+
     private int no_of_times_rotated = 0;
     TextView display;
 
@@ -127,6 +130,21 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
 
         }
         else{
+
+
+            winner_name = null;
+            int max_score = 0;
+
+            for (int i=0; i<score_model.getScoresarray().size(); i++){
+                Model3.Score player_data = score_model.getScoresarray().get(i);
+                String string_player_data = player_data.Score;
+                String[] plited_player_data = string_player_data.split(" ");
+                if (max_score < Integer.parseInt(plited_player_data[1])){
+                    max_score = Integer.parseInt(plited_player_data[1]);
+                    winner_name = plited_player_data[0];
+                }
+            }
+
             ScoreDialog ed = new ScoreDialog();
             ed.show(getSupportFragmentManager(), "Score  Dialog");
             Toast.makeText(SpecialOne.this, "GAME OVER", Toast.LENGTH_SHORT).show();
