@@ -101,7 +101,7 @@ public class MainActivity1 extends AppCompatActivity {
     public void onClick(View v) {
         if (player_model.getPlayersarray().size()>=2 ) {
 
-            Intent opt = new Intent(this,SelectImage.class);
+            Intent opt = new Intent(this,SpecialOne.class);
             startActivity(opt);
 
             /*Intent intent_special = new Intent(this, SpecialOne.class);
