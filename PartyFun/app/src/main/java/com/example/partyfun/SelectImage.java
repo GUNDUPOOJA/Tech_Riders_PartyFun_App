@@ -18,6 +18,9 @@ public class SelectImage extends AppCompatActivity {
     static ArrayList<Uri> temp_image_array = new ArrayList<Uri>();
     private final int CODE_MULTIPLE_IMG_GALLERY = 18;
 
+   // ImageView imageView7 = new ImageView(this);
+    
+
     Uri imageUri;
 
 
@@ -39,6 +42,28 @@ public class SelectImage extends AppCompatActivity {
             }
         });
 
+
+
+        final Uri uri1 = Uri.parse("android.resource://com.example.partyfun/drawable/men1.jpg");
+        Uri uri2 = Uri.parse("android.resource://com.example.partyfun/drawable/men3.jpg");
+        Uri uri3 = Uri.parse("android.resource://com.example.partyfun/drawable/men4.jpg");
+        Uri uri4 = Uri.parse("android.resource://com.example.partyfun/drawable/woman2.jpg");
+        Uri uri5 = Uri.parse("android.resource://com.example.partyfun/drawable/women3.jpg");
+        Uri uri6 = Uri.parse("android.resource://com.example.partyfun/drawable/women4.jpg");
+
+
+       /* imageView7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                img1.setImageURI(uri1);
+            }
+        });
+*/
+
+
+
+
+
     }
 
     public void onImage(View v) {
@@ -59,18 +84,7 @@ public class SelectImage extends AppCompatActivity {
         this.img4 = findViewById(R.id.imageView4);
         this.img5 = findViewById(R.id.imageView5);
         this.img6 = findViewById(R.id.imageView6);
-//        this.img7 = findViewById(R.id.imageView7);
-//        this.img8 = findViewById(R.id.imageView8);
-//        this.img9 = findViewById(R.id.imageView9);
-//        this.img10 = findViewById(R.id.imageView10);
-//        this.img11 = findViewById(R.id.imageView11);
-//        this.img12 = findViewById(R.id.imageView12);
-//        this.img13 = findViewById(R.id.imageView13);
-//        this.img14 = findViewById(R.id.imageView14);
-//        this.img15 = findViewById(R.id.imageView15);
-//        this.img16 = findViewById(R.id.imageView16);
-//        this.img17 = findViewById(R.id.imageView17);
-//        this.img18 = findViewById(R.id.imageView18);
+
     }
 
     
@@ -94,6 +108,8 @@ public class SelectImage extends AppCompatActivity {
                 img4.setImageURI(clipdata.getItemAt(3).getUri());
                 img5.setImageURI(clipdata.getItemAt(4).getUri());
                 img6.setImageURI(clipdata.getItemAt(5).getUri());
+
+
                 temp_image_array.add(clipdata.getItemAt(0).getUri());
                 temp_image_array.add(clipdata.getItemAt(1).getUri());
                 temp_image_array.add(clipdata.getItemAt(2).getUri());

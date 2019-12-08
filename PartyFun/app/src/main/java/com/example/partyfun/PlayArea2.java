@@ -24,7 +24,7 @@ public class PlayArea2 extends AppCompatActivity {
 
         imageView = (ImageView) findViewById(R.id.imageView);
         final int[] imageArray =
-                {R.drawable.men1, R.drawable.men2, R.drawable.men3,R.drawable.woman1, R.drawable.woman2, R.drawable.women3};
+                {R.drawable.men1,  R.drawable.woman2, R.drawable.women3};
 
 
         Random r = new Random();
