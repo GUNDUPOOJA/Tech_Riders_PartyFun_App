@@ -49,3 +49,18 @@ To brighten the boring party time, here is the application to create fun in the 
 
 * Back4app
 * App data(Cache memory)
+
+## Completion status:
+
+* Welcome page: To add player names : Completed
+* Pick a person: This is a simple game to pick a person who can add truth or dare questions : Completed
+* Adding questions (Truth and dare): These are two pages where questions are added : Completed
+* Select image: The players who are playing will select images given or select image from the gallery of mobile : Completed
+* Play area: The images selected by the players represent them and the images will be blinking randomly one after the other and is operated by a button to stop : Completed
+* Select truth or dare: A page will be displayed with the options “Truth” or “Dare” : Completed
+* Question: As per the selection the questions are displayed with two buttons done or forfeit to continue the game : Completed 
+
+## APK file:
+
+* APK file is added to the github repo. Kindly download, install and experience our app.
+
