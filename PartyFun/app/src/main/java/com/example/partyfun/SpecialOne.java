@@ -106,7 +106,7 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
             counter = 0;
             int i = 1;
             final TextView counttime = findViewById(R.id.counttime);
-            new CountDownTimer(10000, 1000) {
+            new CountDownTimer(5000, 1000) {
                 @Override
                 public void onTick(long millisUntilFinished) {
                     counttime.setText(String.valueOf(counter));
