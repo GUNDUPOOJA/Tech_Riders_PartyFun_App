@@ -30,7 +30,7 @@ public class PlayArea extends AppCompatActivity {
 
 
         final int[] imageArray =
-                {R.drawable.men1, R.drawable.woman2, R.drawable.women3};
+                {R.drawable.logo, R.drawable.logo, R.drawable.logo, R.drawable.logo, R.drawable.logo, R.drawable.logo};
 
 
         Random r = new Random();
@@ -48,7 +48,7 @@ public class PlayArea extends AppCompatActivity {
                 if (i > imageArray.length - 1) {
                     i = 0;
                 }
-                handler.postDelayed(this, 10);  //for interval...
+                handler.postDelayed(this, 100);  //for interval...
             }
 
         };

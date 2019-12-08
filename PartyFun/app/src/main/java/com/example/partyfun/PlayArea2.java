@@ -24,7 +24,7 @@ public class PlayArea2 extends AppCompatActivity {
 
         imageView = (ImageView) findViewById(R.id.imageView);
         final int[] imageArray =
-                {R.drawable.men1,  R.drawable.woman2, R.drawable.women3};
+                {R.drawable.logo,  R.drawable.logo, R.drawable.logo, R.drawable.logo,  R.drawable.logo, R.drawable.logo};
 
 
         Random r = new Random();
@@ -35,7 +35,7 @@ public class PlayArea2 extends AppCompatActivity {
             int i = 0;
 
             public void run() {
-                imageView.setImageResource(imageArray[i]);
+                imageView.setImageURI(SelectImage.temp_image_array.get(i));;
                 i++;
                 if (i > imageArray.length - 1) {
                     i = 0;

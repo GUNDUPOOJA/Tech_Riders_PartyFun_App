@@ -19,7 +19,7 @@ public class SelectImage extends AppCompatActivity {
     private final int CODE_MULTIPLE_IMG_GALLERY = 18;
 
    // ImageView imageView7 = new ImageView(this);
-    
+
 
     Uri imageUri;
 
@@ -44,7 +44,7 @@ public class SelectImage extends AppCompatActivity {
 
 
 
-        final Uri uri1 = Uri.parse("android.resource://com.example.partyfun/drawable/men1.jpg");
+        Uri uri1 = Uri.parse("android.resource://com.example.partyfun/drawable/men1.jpg");
         Uri uri2 = Uri.parse("android.resource://com.example.partyfun/drawable/men3.jpg");
         Uri uri3 = Uri.parse("android.resource://com.example.partyfun/drawable/men4.jpg");
         Uri uri4 = Uri.parse("android.resource://com.example.partyfun/drawable/woman2.jpg");
