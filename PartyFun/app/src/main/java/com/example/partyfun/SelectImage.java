@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.net.URI;
 import java.util.ArrayList;
@@ -44,12 +45,7 @@ public class SelectImage extends AppCompatActivity {
 
 
 
-        Uri uri1 = Uri.parse("android.resource://com.example.partyfun/drawable/men1.jpg");
-        Uri uri2 = Uri.parse("android.resource://com.example.partyfun/drawable/men3.jpg");
-        Uri uri3 = Uri.parse("android.resource://com.example.partyfun/drawable/men4.jpg");
-        Uri uri4 = Uri.parse("android.resource://com.example.partyfun/drawable/woman2.jpg");
-        Uri uri5 = Uri.parse("android.resource://com.example.partyfun/drawable/women3.jpg");
-        Uri uri6 = Uri.parse("android.resource://com.example.partyfun/drawable/women4.jpg");
+
 
 
        /* imageView7.setOnClickListener(new View.OnClickListener() {
@@ -110,6 +106,8 @@ public class SelectImage extends AppCompatActivity {
                 img6.setImageURI(clipdata.getItemAt(5).getUri());
 
 
+                Log.d("image_value", img1.toString());
+
                 temp_image_array.add(clipdata.getItemAt(0).getUri());
                 temp_image_array.add(clipdata.getItemAt(1).getUri());
                 temp_image_array.add(clipdata.getItemAt(2).getUri());
@@ -124,6 +122,7 @@ public class SelectImage extends AppCompatActivity {
                     Log.d("onActivityResult: ", uri.toString());
                 }
             }
+            
 
 
 //

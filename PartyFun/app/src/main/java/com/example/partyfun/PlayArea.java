@@ -42,6 +42,7 @@ public class PlayArea extends AppCompatActivity {
 
             public void run() {
                 //imageView = SelectImage.temp_image_array.get(i);
+
                 imageView.setImageURI(SelectImage.temp_image_array.get(i));
                 //imageView.setImageResource(imageArray[i]);
                 i++;
