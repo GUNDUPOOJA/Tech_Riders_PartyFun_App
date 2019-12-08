@@ -25,7 +25,7 @@
         android:layout_width="177dp"
         android:layout_height="60dp"
         android:onClick="onclick"
-        android:text="Start/Stop"
+        android:text="Stop"
         android:textColor="#141313"
         android:textSize="18sp"
         android:textStyle="bold"

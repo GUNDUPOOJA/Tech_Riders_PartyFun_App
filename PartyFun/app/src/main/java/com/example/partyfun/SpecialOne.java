@@ -32,7 +32,7 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
     static String winner_name = null;
 
     private int no_of_times_rotated = 0;
-    TextView display;
+    //TextView display;
 
     private class RecyclerViewOnGestureListener extends GestureDetector.SimpleOnGestureListener {
 
@@ -60,7 +60,7 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
         Button button = findViewById(R.id.button3);
         button.setEnabled(false);
 
-        display = findViewById(R.id.display);
+       // display = findViewById(R.id.display);
 
         score_model = Model3.getModel();
         scoreServer = new ScoreAdapter(score_model);
@@ -102,7 +102,7 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
             Button button = findViewById(R.id.button3);
             button.setEnabled(true);
             click = 0;
-            display.setText(Integer.toString(click));
+         //   display.setText(Integer.toString(click));
             counter = 0;
             int i = 1;
             final TextView counttime = findViewById(R.id.counttime);
@@ -159,7 +159,7 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
         click++;
 
         Log.d("Alert",String.valueOf(click));
-        display.setText(Integer.toString(click));
+     //   display.setText(Integer.toString(click));
 
         String player_name= MainActivity1.player_data.get(no_of_times_rotated);
         player_name = player_name + " " + String.valueOf(click);

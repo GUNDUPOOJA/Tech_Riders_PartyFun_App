@@ -26,7 +26,7 @@ public class ScoreDialog extends DialogFragment{
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder scorebuilder = new AlertDialog.Builder(getActivity());
 //        scorebuilder.setTitle("Register the change");
-        scorebuilder.setMessage("Congratulations, "+SpecialOne.winner_name +"--You are the winner");
+        scorebuilder.setMessage("Congrats, "+SpecialOne.winner_name +"--You are the winner\n---You have an advantage to add custom questions---\n---You can play or just enjoy question---");
 //        scorebuilder.setPositiveButton()
 
         scorebuilder.setPositiveButton("Continue", new DialogInterface.OnClickListener(){
