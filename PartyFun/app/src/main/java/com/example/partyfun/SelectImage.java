@@ -43,7 +43,7 @@ public class SelectImage extends AppCompatActivity {
 
     public void onImage(View v) {
 
-        Intent intent_special = new Intent(this, SpecialOne.class);
+        Intent intent_special = new Intent(this, FourthActivity.class);
         startActivity(intent_special);
 
 

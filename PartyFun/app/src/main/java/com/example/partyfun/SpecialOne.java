@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCallback{
     public int counter;
     public static int click = 0;
@@ -84,7 +86,7 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
 
     public void onContinue(View v){
 
-        Intent image = new Intent(this, FourthActivity.class);
+        Intent image = new Intent(this, SelectImage.class);
         startActivity(image);
 
 
@@ -93,6 +95,7 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
     }
 
     public void onStart(final View v){
+        final Random r1 = new Random();
 
         if (no_of_times_rotated<to_be_rotated) {
 
@@ -139,10 +142,11 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
                 Model3.Score player_data = score_model.getScoresarray().get(i);
                 String string_player_data = player_data.Score;
                 String[] plited_player_data = string_player_data.split(" ");
-                if (max_score < Integer.parseInt(plited_player_data[1])){
+                if (max_score < Integer.parseInt(plited_player_data[1])) {
                     max_score = Integer.parseInt(plited_player_data[1]);
                     winner_name = plited_player_data[0];
                 }
+
             }
 
             ScoreDialog ed = new ScoreDialog();
