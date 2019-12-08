@@ -26,6 +26,9 @@ public class PlayArea extends AppCompatActivity {
 
 
         imageView = (ImageView) findViewById(R.id.imageView);
+
+
+
         final int[] imageArray =
                 {R.drawable.men1, R.drawable.men2, R.drawable.men3,R.drawable.woman1, R.drawable.woman2, R.drawable.women3};
 
@@ -38,12 +41,14 @@ public class PlayArea extends AppCompatActivity {
             int i = 0;
 
             public void run() {
-                imageView.setImageResource(imageArray[i]);
+                //imageView = SelectImage.temp_image_array.get(i);
+                imageView.setImageURI(SelectImage.temp_image_array.get(i));
+                //imageView.setImageResource(imageArray[i]);
                 i++;
                 if (i > imageArray.length - 1) {
                     i = 0;
                 }
-                handler.postDelayed(this, 100);  //for interval...
+                handler.postDelayed(this, 10);  //for interval...
             }
 
         };

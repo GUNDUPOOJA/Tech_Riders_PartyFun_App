@@ -10,8 +10,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.net.URI;
+import java.util.ArrayList;
+
 public class SelectImage extends AppCompatActivity {
     private ImageView img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18;
+    static ArrayList<Uri> temp_image_array = new ArrayList<Uri>();
     private final int CODE_MULTIPLE_IMG_GALLERY = 18;
 
     Uri imageUri;
@@ -69,6 +73,12 @@ public class SelectImage extends AppCompatActivity {
 //        this.img18 = findViewById(R.id.imageView18);
     }
 
+    
+
+
+
+
+
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -84,10 +94,17 @@ public class SelectImage extends AppCompatActivity {
                 img4.setImageURI(clipdata.getItemAt(3).getUri());
                 img5.setImageURI(clipdata.getItemAt(4).getUri());
                 img6.setImageURI(clipdata.getItemAt(5).getUri());
+                temp_image_array.add(clipdata.getItemAt(0).getUri());
+                temp_image_array.add(clipdata.getItemAt(1).getUri());
+                temp_image_array.add(clipdata.getItemAt(2).getUri());
+                temp_image_array.add(clipdata.getItemAt(3).getUri());
+                temp_image_array.add(clipdata.getItemAt(4).getUri());
+                temp_image_array.add(clipdata.getItemAt(5).getUri());
 
                 for (int i = 0; i < clipdata.getItemCount(); i++) {
                     ClipData.Item item = clipdata.getItemAt(i);
                     Uri uri = item.getUri();
+
                     Log.d("onActivityResult: ", uri.toString());
                 }
             }
