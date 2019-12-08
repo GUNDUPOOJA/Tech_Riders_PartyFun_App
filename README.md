@@ -5,7 +5,7 @@ To brighten the boring party time, here is the application to create fun in the 
 
 ## Android application
 
-# Team Members: 
+## Team Members: 
 
 * Sharadruthi Beerkuri
 * Chaitra Vemula
@@ -23,7 +23,7 @@ To brighten the boring party time, here is the application to create fun in the 
 * The player will be redirected to the page, where the player should answer truth or dare question. 
 * Player can click done or forfeit in that page to continue the game.
 
-## Test Credentials
+### Steps to execute application & restrictions of application
 
 * Minimum players are 2 and maximum players are 3.
 * On clicking next "pick special one" page.
@@ -39,13 +39,13 @@ To brighten the boring party time, here is the application to create fun in the 
 * Spin action with the selected images is done in the play area.
 * Truth or dare will display random truth or dare questions from database or user given questions. 
 
-## Supported devices:
+### Supported devices:
 
 * Only works in android devices.
 * Android 5.0(Lollipop) and above versions.
 * Minimum sdk version 21 and target sdk version 29.
 
-## Database:
+### Database:
 
 * Back4app
 * App data(Cache memory)
