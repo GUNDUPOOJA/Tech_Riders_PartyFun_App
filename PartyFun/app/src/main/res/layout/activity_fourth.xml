@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/questions"
         android:layout_width="253dp"
         android:layout_height="110dp"
         android:text="XYZ Please Enter Questions or Continue With Us.."
