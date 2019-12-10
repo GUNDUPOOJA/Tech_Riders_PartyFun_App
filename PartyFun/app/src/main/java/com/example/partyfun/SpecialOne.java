@@ -19,6 +19,8 @@ import android.widget.Toast;
 
 import java.util.Random;
 
+import static com.example.partyfun.MainActivity1.player_model;
+
 public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCallback{
     public int counter;
     public static int click = 0;
@@ -62,6 +64,9 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
 
        // display = findViewById(R.id.display);
 
+
+
+
         score_model = Model3.getModel();
         scoreServer = new ScoreAdapter(score_model);
         scorerecycler = findViewById(R.id.RecyclerView2);
@@ -77,10 +82,24 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
             }
         });
 
+        int length = score_model.getScoresarray().size();
+
+        for (int i =0; i<length; i++){
+            score_model.getScoresarray().remove(0);
+        }
+
+        Log.d("Size", String.valueOf(score_model.getScoresarray().size()));
+        Log.d("Size", String.valueOf(MainActivity1.player_data.size()));
+
+        scoreServer.notifyDataSetChanged();
+
+
         for(int i=0; i<MainActivity1.player_data.size(); i++){
             String name=MainActivity1.player_data.get(i);
             score_model.getScoresarray().add(new Model3.Score(name));
         }
+
+
 
     }
 
@@ -175,5 +194,17 @@ public class SpecialOne extends AppCompatActivity implements ScoreDialog.ScoreCa
         scoreServer.notifyItemChanged(no_of_times_rotated);
 
         scoreServer.notifyDataSetChanged();
+    }
+
+    public void onAdd(View v){
+        Intent add_intent = new Intent(this, MainActivity1.class);
+        startActivity(add_intent);
+        int length = player_model.getPlayersarray().size();
+
+        for (int i =0; i<length; i++){
+            player_model.getPlayersarray().remove(0);
+        }
+       MainActivity1.playerServer.notifyDataSetChanged();;
+
     }
 }

@@ -32,4 +32,11 @@ public class Dar1 extends AppCompatActivity {
         Intent F = new Intent(this,PlayArea2.class);
         startActivity(F);
     }
+    public void onAdd(View v){
+        Intent add_intent = new Intent(this, MainActivity1.class);
+        startActivity(add_intent);
+        MainActivity1.player_model.getPlayersarray().clear();
+        MainActivity1.playerServer.notifyDataSetChanged();
+
+    }
 }

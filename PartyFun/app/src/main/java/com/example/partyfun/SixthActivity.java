@@ -95,4 +95,12 @@ public class SixthActivity extends AppCompatActivity {
         setResult(FourthActivity.GOOD_D_RES,done_int2);
         finish();
     }
+
+    public void onAdd(View v){
+        Intent add_intent = new Intent(this, MainActivity1.class);
+        startActivity(add_intent);
+        MainActivity1.player_model.getPlayersarray().clear();
+        MainActivity1.playerServer.notifyDataSetChanged();
+
+    }
 }

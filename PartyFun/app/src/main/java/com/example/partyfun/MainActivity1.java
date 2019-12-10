@@ -21,8 +21,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainActivity1 extends AppCompatActivity {
-    private Model player_model;
-    private PlayerAdapter playerServer = null;
+    static Model player_model;
+    static PlayerAdapter playerServer = null;
     private RecyclerView playerrecycler = null;
     private GestureDetectorCompat gesture_detector = null;
     static ArrayList<String> player_data = new ArrayList<String>();
@@ -70,6 +70,15 @@ public class MainActivity1 extends AppCompatActivity {
         Button word_add = findViewById(R.id.button);
 
         gesture_detector = new GestureDetectorCompat(this, new RecyclerViewOnGestureListener());
+
+
+        int length = player_model.getPlayersarray().size();
+
+        for (int i =0; i<length; i++){
+            player_model.getPlayersarray().remove(0);
+        }
+        playerServer.notifyDataSetChanged();
+
 
         playerrecycler.addOnItemTouchListener(new RecyclerView.SimpleOnItemTouchListener(){
             @Override
